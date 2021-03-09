@@ -108,7 +108,7 @@ def check_smbc(last_url):
 os.makedirs('Web Comics', exist_ok=True)
 
 # File containing latest comic URL checked
-with open('/Web Comics/last_downloaded.txt') as f:
+with open('Web Comics/last_downloaded.txt') as f:
     info = f.read().splitlines()
     date = info[0]
     last_xkcd = info[1]
@@ -121,7 +121,7 @@ print('Last comic check = ' + date)
 xkcd_url = check_xkcd(last_xkcd)
 smbc_url = check_smbc(last_smbc)
 
-with open('/Web Comics/last_downloaded.txt', 'w') as f:
+with open('Web Comics/last_downloaded.txt', 'w') as f:
     f.write(date + '\n')
     f.write(xkcd_url + '\n')
     f.write(smbc_url + '\n')

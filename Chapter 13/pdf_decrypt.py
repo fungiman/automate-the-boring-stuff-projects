@@ -13,7 +13,7 @@ import PyPDF2
 password = sys.argv[1]
 decrypt_failed = []
 
-for folders, subfolders, filenames in os.walk('.'):
+for folders, subfolders, filenames in os.walk(''):
 
     for filename in filenames:
         if filename.endswith('.pdf'):

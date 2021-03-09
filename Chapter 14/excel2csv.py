@@ -6,7 +6,7 @@ import os
 import csv
 import openpyxl
 
-for file in os.listdir('.'):
+for file in os.listdir(''):
     if file.endswith('.xlsx'):
         wb = openpyxl.load_workbook(file)
 
